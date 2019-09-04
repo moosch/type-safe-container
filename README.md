@@ -52,11 +52,16 @@ typeSafeBox
 
 ### Operations
 
-`map` - takes a function, runs it over the container data, then returns the container with the new data inside.
-
-`chain` - the same as `map` but returns the raw data
-`join` - returns the container data
-`inspect` - displays the container value when passed to `console.log`
+| method | description                                                 | example                             | output    |
+|:--------:|-----------------------------------------------------------|-------------------------------------|:---------:|
+| `map`    | takes a function and returns a new container with         | `type(5).map((data) => data + 1)`   | `type(6)` |
+|          | the result of passing the data through the function       |                                     |           |
+|          |                                                           |                                     |           |
+|`chain`   | the same as `map` but returns the unwrapped data          | `type(5).chain((data) => data + 1)` | 6         |
+|          |                                                           |                                     |           |
+|`join`    | returns the unwrapped data                                | `type(5).join()`                    | 5         |
+|          |                                                           |                                     |           |
+|`inspect` | displays the container value when passed to `console.log` | `console.log(type(5))`              | Type(5)   |
 
 
 ### License
